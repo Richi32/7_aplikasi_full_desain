@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $PORT_AKSES = $_POST["PORT_AKSES"];
 
     // Menjalankan shell script untuk memproses data
-    $output = shell_exec("bash process_form.sh '$LINK_GIT' '$NAMA_DATABASE' '$PORT_AKSES'");
+    $output = shell_exec("bash pendocker.sh '$LINK_GIT' '$NAMA_DATABASE' '$PORT_AKSES'");
 
     // Menampilkan hasil output dari shell script
     echo "<h1>Hasil Form</h1>";
