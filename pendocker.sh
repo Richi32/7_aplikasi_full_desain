@@ -1,6 +1,11 @@
 #!/bin/sh
 
 # Menerima data form dari input POST
+
+LINK_GIT=$1
+NAMA_DATABASE=$2
+PORT_AKSES=$3
+
 read -r LINK_GIT
 read -r NAMA_DATABASE
 read -r PORT_AKSES
