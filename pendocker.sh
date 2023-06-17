@@ -1,9 +1,10 @@
 #!/bin/sh
 
 # Menerima data form dari input POST
-LINK_GIT=$1
-NAMA_DATABASE=$2
-PORT_AKSES=$3
+read -r LINK_GIT
+read -r NAMA_DATABASE
+read -r PORT_AKSES
+
 
 
 PORT_BACKEND=$((PORT_AKSES + 1))
@@ -22,7 +23,7 @@ repo_name=$(basename $repo_url .git)
 
 # Clone repositori dengan nama folder yang baru
 clear
-git clone $repo_url $repo_name
+output=$(git clone $repo_url $repo_name)
 echo "$PORT_AKSES-$PORT_BACKEND-$PORT_DATABASE-$repo_name" >> list_port.txt
 cd $repo_name
 echo "Berhasil mengekstrak aplikasi dari git"
@@ -105,7 +106,7 @@ echo "Docker Compose telah dibuat!"
 # echo "mengisntall hapi"
 # npm install @hapi/hapi
 echo "membuat image docker"
-docker-compose up --build -d
+output=$(docker-compose up --build -d)
 echo "berhasil membuat image"
 echo "berhasil membuat docker"
 echo "tunggu beberapat saat agar sistemnya berjalan dan anda bisa menggunakannya"
