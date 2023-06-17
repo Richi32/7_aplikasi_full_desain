@@ -28,7 +28,7 @@ repo_name=$(basename $repo_url .git)
 
 # Clone repositori dengan nama folder yang baru
 clear
-output=$(sudo git clone $repo_url $repo_name)
+output=$(git clone $repo_url $repo_name)
 echo "$PORT_AKSES-$PORT_BACKEND-$PORT_DATABASE-$repo_name" >> list_port.txt
 cd $repo_name
 echo "Berhasil mengekstrak aplikasi dari git"
