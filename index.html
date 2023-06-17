@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aplikasi Desain Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Form Aplikasi Docker</h1>
+        <form id="myForm">
+            <div class="form-group">
+                <label for="LINK_GIT">Nama:</label>
+                <input type="text" name="LINK_GIT" id="LINK_GIT" required>
+            </div>
+
+            <div class="form-group">
+                <label for="NAMA_DATABASE">Alamat:</label>
+                <input type="text" name="NAMA_DATABASE" id="NAMA_DATABASE" required>
+            </div>
+
+            <div class="form-group">
+                <label for="PORT_AKSES">Email:</label>
+                <input type="email" name="PORT_AKSES" id="PORT_AKSES" required>
+            </div>
+
+            <div class="form-group">
+                <input type="button" value="Submit" onclick="processForm()">
+            </div>
+        </form>
+        <div id="result"></div>
+    </div>
+</body>
+</html>
+
